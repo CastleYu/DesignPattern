@@ -1,14 +1,8 @@
-<<<<<<<< HEAD:src/singleton/LockSingleton.java
 package singleton;
 
 public class LockSingleton {
     private static volatile LockSingleton instance;
 
-========
-public class LockSingleton {
-    private static volatile LockSingleton instance;
-
->>>>>>>> origin/main:src/LockSingleton.java
     private LockSingleton() {
     }
 
