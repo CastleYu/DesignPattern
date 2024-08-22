@@ -9,13 +9,16 @@ public abstract class Page {
     protected final String title;
     protected final String author;
     protected final Vector content = new Vector();
+
     public Page(String title, String author) {
         this.title = title;
         this.author = author;
     }
+
     public void add(Item item) {
         content.add(item);
     }
+
     public void output() {
         try {
             String filename = title + ".html";
@@ -27,5 +30,6 @@ public abstract class Page {
             e.printStackTrace();
         }
     }
+
     public abstract String makeHTML();
 }

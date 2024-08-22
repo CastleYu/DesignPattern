@@ -3,6 +3,7 @@ package Flyweight;
 public class BigString {
     // 「大型文字」的数组
     private final BigChar[] bigchars;
+
     // 构造子
     public BigString(String string) {
         bigchars = new BigChar[string.length()];//建立数组
@@ -12,6 +13,7 @@ public class BigString {
             bigchars[i] = factory.getBigChar(string.charAt(i));
         }
     }
+
     // 显示
     public void print() {
         for (BigChar bigchar : bigchars) {

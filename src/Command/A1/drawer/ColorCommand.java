@@ -9,11 +9,13 @@ public class ColorCommand implements Command {
     protected final Drawable drawable;
     // 绘制色彩
     private final Color color;
+
     // 构造子
     public ColorCommand(Drawable drawable, Color color) {
         this.drawable = drawable;
         this.color = color;
     }
+
     // 执行
     public void execute() {
         drawable.setColor(color);

@@ -13,11 +13,7 @@ public class BookShelfIterator implements Iterator<Book> {
     }
 
     public boolean hasNext() {
-        if (index < bookShelf.getLength()) {
-            return true;
-        } else {
-            return false;
-        }
+        return index < bookShelf.getLength();
     }
 
     //next方法返回目前该书（Book的对象实例），然后把index推到下一个为位置

@@ -11,16 +11,19 @@ public class DrawCanvas extends Canvas implements Drawable {
     private final int radius = 6;
     // 记录
     private final MacroCommand history;
+
     // 构造子
     public DrawCanvas(int width, int height, MacroCommand history) {
         setSize(width, height);
         setBackground(Color.white);
         this.history = history;
     }
+
     // 再度绘制整个记录
     public void paint(Graphics g) {
         history.execute();
     }
+
     // 绘制
     public void draw(int x, int y) {
         Graphics g = getGraphics();

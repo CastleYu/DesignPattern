@@ -7,6 +7,7 @@ public class ListTray extends Tray {
     public ListTray(String caption) {
         super(caption);
     }
+
     public String makeHTML() {
         StringBuilder buffer = new StringBuilder();
         buffer.append("<li>\n");

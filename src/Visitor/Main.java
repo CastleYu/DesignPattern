@@ -15,7 +15,7 @@ public class Main {
             bindir.add(new File("latex", 20000));
             rootdir.accept(new ListVisitor());
 
-            System.out.println("");
+            System.out.println();
             System.out.println("Making user entries...");
             Directory yuki = new Directory("yuki");
             Directory hanako = new Directory("hanako");

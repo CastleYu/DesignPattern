@@ -4,16 +4,18 @@ import java.util.Random;
 
 public class ProbStrategy implements Strategy {
     private final Random random;
+    private final int[][] history = {
+            {1, 1, 1,},
+            {1, 1, 1,},
+            {1, 1, 1,},
+    };
     private int prevHandValue = 0;
     private int currentHandValue = 0;
-    private final int[][] history = {
-        { 1, 1, 1, },
-        { 1, 1, 1, },
-        { 1, 1, 1, },
-    };
+
     public ProbStrategy(int seed) {
         random = new Random(seed);
     }
+
     public Hand nextHand() {
         int bet = random.nextInt(getSum(currentHandValue));
         int handvalue;
@@ -28,6 +30,7 @@ public class ProbStrategy implements Strategy {
         currentHandValue = handvalue;
         return Hand.getHand(handvalue);
     }
+
     private int getSum(int hv) {
         int sum = 0;
         for (int i = 0; i < 3; i++) {
@@ -35,6 +38,7 @@ public class ProbStrategy implements Strategy {
         }
         return sum;
     }
+
     public void study(boolean win) {
         if (win) {
             history[prevHandValue][currentHandValue]++;

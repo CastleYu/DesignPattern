@@ -45,16 +45,16 @@ public class Main extends JFrame implements ActionListener {
         setVisible(true);
     }
 
+    public static void main(String[] args) {
+        new Main("Command Pattern Sample");
+    }
+
     // ActionListener”√
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
             history.clear();
             canvas.repaint();
         }
-    }
-
-    public static void main(String[] args) {
-        new Main("Command Pattern Sample");
     }
 }
 

@@ -7,6 +7,7 @@ public class TableTray extends Tray {
     public TableTray(String caption) {
         super(caption);
     }
+
     public String makeHTML() {
         StringBuilder buffer = new StringBuilder();
         buffer.append("<td>");

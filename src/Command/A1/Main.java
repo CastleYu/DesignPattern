@@ -49,6 +49,10 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         setVisible(true);
     }
 
+    public static void main(String[] args) {
+        new Main("Command Pattern Sample");
+    }
+
     // ActionListener用
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
@@ -101,10 +105,6 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
     }
 
     public void windowOpened(WindowEvent e) {
-    }
-
-    public static void main(String[] args) {
-        new Main("Command Pattern Sample");
     }
 }
 

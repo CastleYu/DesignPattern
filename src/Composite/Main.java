@@ -15,7 +15,7 @@ public class Main {
             bindir.add(new File("latex", 20000));
             rootdir.printList();
 
-            System.out.println("");
+            System.out.println();
             System.out.println("Making user entries...");
             Directory lee = new Directory("Lee");
             Directory wang = new Directory("Wang");

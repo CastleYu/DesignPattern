@@ -18,7 +18,7 @@ public class Main {
 //        }
 
         for (Book book : bookShelf) {
-            System.out.println("" + book.getName());
+            System.out.println(book.getName());
         }
     }
 }

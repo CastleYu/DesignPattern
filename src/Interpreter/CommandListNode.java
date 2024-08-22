@@ -1,9 +1,11 @@
 package Interpreter;
 
 import java.util.Vector;
+
 // <command list> ::= <command>* end
 public class CommandListNode extends Node {
     private final Vector list = new Vector();
+
     public void parse(Context context) throws ParseException {
         while (true) {
             if (context.currentToken() == null) {
@@ -18,6 +20,7 @@ public class CommandListNode extends Node {
             }
         }
     }
+
     public String toString() {
         return "" + list;
     }

@@ -1,5 +1,5 @@
 package Bridge;
 
-public abstract class CoffeeImp{
-   public abstract void pourCoffeeImp();
+public abstract class CoffeeImp {
+    public abstract void pourCoffeeImp();
 } 

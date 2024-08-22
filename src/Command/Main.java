@@ -14,8 +14,9 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
     // 绘制区域
     private final DrawCanvas canvas = new DrawCanvas(400, 400, history);
     // 刪除键
-    private final JButton clearButton  = new JButton("clear");
-    private final JButton undoButton  = new JButton("Undo");
+    private final JButton clearButton = new JButton("clear");
+    private final JButton undoButton = new JButton("Undo");
+
     // 构造子
     public Main(String title) {
         super(title);
@@ -37,6 +38,10 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         setVisible(true);
     }
 
+    public static void main(String[] args) {
+        new Main("Command Pattern Sample");
+    }
+
     // ActionListener用
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
@@ -54,6 +59,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
     // MouseMotionListener用
     public void mouseMoved(MouseEvent e) {
     }
+
     public void mouseDragged(MouseEvent e) {
         Command cmd = new DrawCommand(canvas, e.getPoint());
         history.append(cmd);
@@ -64,15 +70,23 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
     public void windowClosing(WindowEvent e) {
         System.exit(0);
     }
-    public void windowActivated(WindowEvent e) {}
-    public void windowClosed(WindowEvent e) {}
-    public void windowDeactivated(WindowEvent e) {}
-    public void windowDeiconified(WindowEvent e) {}
-    public void windowIconified(WindowEvent e) {}
-    public void windowOpened(WindowEvent e) {}
 
-    public static void main(String[] args) {
-        new Main("Command Pattern Sample");
+    public void windowActivated(WindowEvent e) {
+    }
+
+    public void windowClosed(WindowEvent e) {
+    }
+
+    public void windowDeactivated(WindowEvent e) {
+    }
+
+    public void windowDeiconified(WindowEvent e) {
+    }
+
+    public void windowIconified(WindowEvent e) {
+    }
+
+    public void windowOpened(WindowEvent e) {
     }
 }
 

@@ -7,7 +7,7 @@ public class GraphObserver implements Observer {
         for (int i = 0; i < count; i++) {
             System.out.print("#");
         }
-        System.out.println("");
+        System.out.println();
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {

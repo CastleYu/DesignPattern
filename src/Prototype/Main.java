@@ -15,7 +15,7 @@ public class Main {
 
         // 实现部分
         //请问：P1、P2、P3、P4、P5、P6、是什么？从那里来的？
-        Product p1 = manager.create("strong message");      
+        Product p1 = manager.create("strong message");
         p1.use("Hello, world.");
         Product p2 = manager.create("strong message");
         p2.use("Hello, XMU.");

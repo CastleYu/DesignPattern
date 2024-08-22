@@ -2,12 +2,11 @@ package gumballStatePattern.gumballstatewinner;
 
 public class GumballMachine {
 
-    State soldOutState;
     final State noQuarterState;
     final State hasQuarterState;
     final State soldState;
     final State winnerState;
-
+    State soldOutState;
     State state = soldOutState;
     int count;
 
@@ -37,10 +36,6 @@ public class GumballMachine {
         state.dispense();
     }
 
-    void setState(State state) {
-        this.state = state;
-    }
-
     void releaseBall() {
         System.out.println("A gumball comes rolling out the slot...");
         if (count != 0) {
@@ -60,6 +55,10 @@ public class GumballMachine {
 
     public State getState() {
         return state;
+    }
+
+    void setState(State state) {
+        this.state = state;
     }
 
     public State getSoldOutState() {

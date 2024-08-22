@@ -1,5 +1,5 @@
 package Strategy.AnotherExample;
 
-class Site{
-  	
+class Site {
+
 }

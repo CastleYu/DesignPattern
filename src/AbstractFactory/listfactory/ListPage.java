@@ -7,6 +7,7 @@ public class ListPage extends Page {
     public ListPage(String title, String author) {
         super(title, author);
     }
+
     public String makeHTML() {
         StringBuilder buffer = new StringBuilder();
         buffer.append("<html><head><title>").append(title).append("</title></head>\n");

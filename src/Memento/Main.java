@@ -1,7 +1,7 @@
 package Memento;
 
-import game.Gamer;
-import game.Memento;
+import Memento.game.Gamer;
+import Memento.game.Memento;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Main {
         Memento memento = gamer.createMemento();    // 预先储存最初状态
         for (int i = 0; i < 10; i++) {
             System.out.println("==== " + i);        // 输出次数
-            System.out.println("现况:" + gamer.toString());    // 输出主人的目前状态
+            System.out.println("现况:" + gamer);    // 输出主人的目前状态
 
             gamer.bet();    // 进行游戏
 
@@ -29,7 +29,7 @@ public class Main {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

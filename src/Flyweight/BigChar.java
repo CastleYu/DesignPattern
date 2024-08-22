@@ -9,6 +9,7 @@ public class BigChar {
     private final char charname;
     // 输出成大型文字的字串（有'#' '.' '\n'的行）
     private String fontdata;
+
     // 构造子
     public BigChar(char charname) {
         this.charname = charname;
@@ -26,6 +27,7 @@ public class BigChar {
             this.fontdata = charname + "?";
         }
     }
+
     // 输出大型文字
     public void print() {
         System.out.print(fontdata);

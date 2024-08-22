@@ -7,6 +7,7 @@ import java.util.Properties;
 public class PageMaker {
     private PageMaker() {   // 因为不产生对象实例，故声明private
     }
+
     public static void makeWelcomePage(String mailaddr, String filename) {
         try {
             Properties mailprop = Database.getProperties("maildata");

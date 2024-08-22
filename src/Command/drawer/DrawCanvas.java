@@ -10,7 +10,7 @@ public class DrawCanvas extends Canvas implements Drawable {
     // 绘制点的半径
     private final int radius = 6;
     // 记录
-    private MacroCommand history;
+    private final MacroCommand history;
 
     // 构造子
     public DrawCanvas(int width, int height, MacroCommand history) {
