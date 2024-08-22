@@ -1,11 +1,10 @@
 package Composite;
 
-import java.util.Iterator;
-import java.util.Vector; 
+import java.util.Vector;
  
 public class Directory extends Entry { 
-    private String name;                      // 目錄名稱 
-    private Vector directory = new Vector();  // 目錄进入点的集合 
+    private final String name;                      // 目錄名稱
+    private final Vector directory = new Vector();  // 目錄进入点的集合
     public Directory(String name) {           // 建構子 
         this.name = name; 
     } 
@@ -13,11 +12,10 @@ public class Directory extends Entry {
         return name; 
     } 
     public int getSize() {                    // 取得目錄容量 
-        int size = 0; 
-        Iterator it = directory.iterator(); 
-        while (it.hasNext()) { 
-            Entry entry = (Entry)it.next(); 
-            size+= entry.getSize(); 
+        int size = 0;
+        for (Object o : directory) {
+            Entry entry = (Entry) o;
+            size += entry.getSize();
         } 
         return size; 
     } 
@@ -26,11 +24,10 @@ public class Directory extends Entry {
         return this; 
     } 
     protected void printList(String prefix) {       // 进入点的总览 
-        System.out.println(prefix + "/" + this); 
-        Iterator it = directory.iterator(); 
-        while (it.hasNext()) { 
-            Entry entry = (Entry)it.next(); 
-            entry.printList(prefix + "/" + name); 
+        System.out.println(prefix + "/" + this);
+        for (Object o : directory) {
+            Entry entry = (Entry) o;
+            entry.printList(prefix + "/" + name);
         } 
     } 
 } 

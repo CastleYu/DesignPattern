@@ -3,7 +3,7 @@ package Prototype;
 import framework.*;
 
 public class MessageBox implements Product {
-    private char decochar;
+    private final char decochar;
     public MessageBox(char decochar) {
         this.decochar = decochar;
     }

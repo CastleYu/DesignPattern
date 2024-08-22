@@ -1,23 +1,16 @@
 package State;
 
-import java.awt.Frame;
-import java.awt.Label; 
-import java.awt.Color; 
-import java.awt.Button; 
-import java.awt.TextField; 
-import java.awt.TextArea; 
-import java.awt.Panel; 
-import java.awt.BorderLayout; 
-import java.awt.event.ActionListener; 
-import java.awt.event.ActionEvent; 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
  
 public class SafeFrame extends Frame implements ActionListener, Context { 
-    private TextField textClock = new TextField(60);	// 输出现在时间 
-    private TextArea textScreen = new TextArea(10, 60);	// 输出保安中心 
-    private Button buttonUse = new Button("使用金库");	// 使用金库的按键 
-    private Button buttonAlarm = new Button("警铃");	// 警铃的按键 
-    private Button buttonPhone = new Button("一般通话");	// 一般通话的按键 
-    private Button buttonExit = new Button("结束");		// 结束的按键 
+    private final TextField textClock = new TextField(60);	// 输出现在时间
+    private final TextArea textScreen = new TextArea(10, 60);	// 输出保安中心
+    private final Button buttonUse = new Button("使用金库");	// 使用金库的按键
+    private final Button buttonAlarm = new Button("警铃");	// 警铃的按键
+    private final Button buttonPhone = new Button("一般通话");	// 一般通话的按键
+    private final Button buttonExit = new Button("结束");		// 结束的按键
  
     //private State state = DayState.getInstance();		// 现在状态 
     private State state = NightState.getInstance();		// 现在状态 

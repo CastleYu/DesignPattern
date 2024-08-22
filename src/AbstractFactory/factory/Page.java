@@ -1,5 +1,8 @@
 package AbstractFactory.factory;
-import java.io.*;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.Vector;
 
 public abstract class Page {

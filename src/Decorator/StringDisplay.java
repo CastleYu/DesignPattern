@@ -1,7 +1,7 @@
 package Decorator;
 
 public class StringDisplay extends Display {
-    private String string;                          // 打印的字串
+    private final String string;                          // 打印的字串
     public StringDisplay(String string) {           // 以参数指定打印的字串
         this.string = string;
     }

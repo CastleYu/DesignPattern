@@ -1,13 +1,14 @@
 package Command.drawer;
 
-import command.Command;
-import java.awt.Point;
+import Command.command.Command;
+
+import java.awt.*;
 
 public class DrawCommand implements Command {
     // 绘制对象
-    protected Drawable drawable;
+    protected final Drawable drawable;
     // 绘制位置
-    private Point position;
+    private final Point position;
     // 构造子
     public DrawCommand(Drawable drawable, Point position) {
         this.drawable = drawable;

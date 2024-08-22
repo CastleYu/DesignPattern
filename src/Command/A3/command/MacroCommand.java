@@ -1,16 +1,14 @@
 package Command.A3.command;
 
 import java.util.Stack;
-import java.util.Iterator;
 
 public class MacroCommand implements Command {
     // 命令的集合
-    private Stack commands = new Stack();
+    private final Stack commands = new Stack();
     // 执行
     public void execute() {
-        Iterator it = commands.iterator();
-        while (it.hasNext()) {
-            ((Command)it.next()).execute();
+        for (Object command : commands) {
+            ((Command) command).execute();
         }
     }
     // 新增

@@ -1,42 +1,45 @@
 package Command.A1;
 
-import command.*;
-import drawer.*;
+import Command.A1.command.Command;
+import Command.A1.command.MacroCommand;
+import Command.A1.drawer.ColorCommand;
+import Command.A1.drawer.DrawCanvas;
+import Command.A1.drawer.DrawCommand;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
 
 public class Main extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
-    // ªÊ÷∆º«¬º
-    private MacroCommand history = new MacroCommand();
-    // ªÊ÷∆«¯”Ú
-    private DrawCanvas canvas = new DrawCanvas(400, 400, history);
-    // Ñh≥˝º¸
-    private JButton clearButton  = new JButton("clear");
-    // ºt…´º¸
-    private JButton redButton  = new JButton("red");        
-    // æG…´º¸
-    private JButton greenButton  = new JButton("green");    
-    // À{…´º¸
-    private JButton blueButton  = new JButton("blue");      
+    // ÁªòÂà∂ËÆ∞ÂΩï
+    private final MacroCommand history = new MacroCommand();
+    // ÁªòÂà∂Âå∫Âüü
+    private final DrawCanvas canvas = new DrawCanvas(400, 400, history);
+    // Âà™Èô§ÈîÆ
+    private final JButton clearButton = new JButton("clear");
+    // Á¥ÖËâ≤ÈîÆ
+    private final JButton redButton = new JButton("red");
+    // Á∂†Ëâ≤ÈîÆ
+    private final JButton greenButton = new JButton("green");
+    // ËóçËâ≤ÈîÆ
+    private final JButton blueButton = new JButton("blue");
 
-    // ππ‘Ï◊”
+    // ÊûÑÈÄ†Â≠ê
     public Main(String title) {
         super(title);
 
         this.addWindowListener(this);
         canvas.addMouseMotionListener(this);
         clearButton.addActionListener(this);
-        redButton.addActionListener(this);      
-        greenButton.addActionListener(this);    
-        blueButton.addActionListener(this);     
+        redButton.addActionListener(this);
+        greenButton.addActionListener(this);
+        blueButton.addActionListener(this);
 
         Box buttonBox = new Box(BoxLayout.X_AXIS);
         buttonBox.add(clearButton);
-        buttonBox.add(redButton);   
-        buttonBox.add(greenButton); 
-        buttonBox.add(blueButton);  
+        buttonBox.add(redButton);
+        buttonBox.add(greenButton);
+        buttonBox.add(blueButton);
         Box mainBox = new Box(BoxLayout.Y_AXIS);
         mainBox.add(buttonBox);
         mainBox.add(canvas);
@@ -46,46 +49,59 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         setVisible(true);
     }
 
-    // ActionListener”√
+    // ActionListenerÁî®
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
             history.clear();
-            canvas.init();                                      
+            canvas.init();
             canvas.repaint();
-        } else if (e.getSource() == redButton) {                
-            Command cmd = new ColorCommand(canvas, Color.red);  
-            history.append(cmd);                                
-            cmd.execute();                                      
-        } else if (e.getSource() == greenButton) {              
+        } else if (e.getSource() == redButton) {
+            Command cmd = new ColorCommand(canvas, Color.red);
+            history.append(cmd);
+            cmd.execute();
+        } else if (e.getSource() == greenButton) {
             Command cmd = new ColorCommand(canvas, Color.green);
-            history.append(cmd);                                
-            cmd.execute();                                      
-        } else if (e.getSource() == blueButton) {               
-            Command cmd = new ColorCommand(canvas, Color.blue); 
-            history.append(cmd);                                
-            cmd.execute();                                      
+            history.append(cmd);
+            cmd.execute();
+        } else if (e.getSource() == blueButton) {
+            Command cmd = new ColorCommand(canvas, Color.blue);
+            history.append(cmd);
+            cmd.execute();
         }
     }
 
-    // MouseMotionListener”√
+    // MouseMotionListenerÁî®
     public void mouseMoved(MouseEvent e) {
     }
+
     public void mouseDragged(MouseEvent e) {
         Command cmd = new DrawCommand(canvas, e.getPoint());
         history.append(cmd);
         cmd.execute();
     }
 
-    // WindowListener”√
+    // WindowListenerÁî®
     public void windowClosing(WindowEvent e) {
         System.exit(0);
     }
-    public void windowActivated(WindowEvent e) {}
-    public void windowClosed(WindowEvent e) {}
-    public void windowDeactivated(WindowEvent e) {}
-    public void windowDeiconified(WindowEvent e) {}
-    public void windowIconified(WindowEvent e) {}
-    public void windowOpened(WindowEvent e) {}
+
+    public void windowActivated(WindowEvent e) {
+    }
+
+    public void windowClosed(WindowEvent e) {
+    }
+
+    public void windowDeactivated(WindowEvent e) {
+    }
+
+    public void windowDeiconified(WindowEvent e) {
+    }
+
+    public void windowIconified(WindowEvent e) {
+    }
+
+    public void windowOpened(WindowEvent e) {
+    }
 
     public static void main(String[] args) {
         new Main("Command Pattern Sample");

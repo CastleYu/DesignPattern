@@ -1,3 +1,5 @@
+package TemplateMethod;
+
 public abstract class AbstractDisplay { // 抽象类AbstractDisplay
     public abstract void open();        // 由子类实现的抽象方法（1）open
     public abstract void print();       // 由子类实现的抽象方法（2）print

@@ -11,9 +11,13 @@ public class Main {
         //而是指定到Iterator类变量
         //因为我们不是利用shelfIterator的方法来写程序
         //而是打算利用Iterator的方法来写程序    
-        Iterator it = bookShelf.iterator();
-        while (it.hasNext()) {
-            Book book = (Book)it.next();
+//        Iterator it = bookShelf.iterator();
+//        while (it.hasNext()) {
+//            Book book = (Book) it.next();
+//            System.out.println("" + book.getName());
+//        }
+
+        for (Book book : bookShelf) {
             System.out.println("" + book.getName());
         }
     }

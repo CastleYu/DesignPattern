@@ -1,10 +1,9 @@
 package Observer;
 
 import java.util.Vector;
-import java.util.Iterator;
 
 public abstract class NumberGenerator {
-    private Vector observers = new Vector();        // 储存Observer 
+    private final Vector observers = new Vector();        // 储存Observer
     public void addObserver(Observer observer) {    // 新增Observer
         observers.add(observer);
     }
@@ -12,10 +11,9 @@ public abstract class NumberGenerator {
         observers.remove(observer);
     }
     public void notifyObservers() {               // 通知Observer
-        Iterator it = observers.iterator();
 
-        while (it.hasNext()) {
-            Observer o = (Observer)it.next();
+        for (Object observer : observers) {
+            Observer o = (Observer) observer;
             o.update(this);
         }
     }

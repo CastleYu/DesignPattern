@@ -1,13 +1,14 @@
 package Command.A1.drawer;
 
-import command.Command;
-import java.awt.Color;
+import Command.A1.command.Command;
+
+import java.awt.*;
 
 public class ColorCommand implements Command {
     // 绘制对象
-    protected Drawable drawable;
+    protected final Drawable drawable;
     // 绘制色彩
-    private Color color;
+    private final Color color;
     // 构造子
     public ColorCommand(Drawable drawable, Color color) {
         this.drawable = drawable;

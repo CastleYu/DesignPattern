@@ -1,7 +1,7 @@
 package Decorator;
 
 public class SideBorder extends Border {
-    private char borderChar;                        // 装饰字符
+    private final char borderChar;                        // 装饰字符
     public SideBorder(Display display, char ch) {   // 以构造子指定Display和装饰字符 
         super(display);
         this.borderChar = ch;

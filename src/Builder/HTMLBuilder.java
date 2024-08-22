@@ -1,6 +1,8 @@
 package Builder;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class HTMLBuilder extends Builder {
     private String filename;                           // 产生的文件名
@@ -21,8 +23,8 @@ public class HTMLBuilder extends Builder {
     }
     public void makeItems(String[] items) {            // HTML文件的项目
         writer.println("<ul>");                        // 以<ul>和<li>输出
-        for (int i = 0; i < items.length; i++) {
-            writer.println("<li>" + items[i] + "</li>");
+        for (String item : items) {
+            writer.println("<li>" + item + "</li>");
         }
         writer.println("</ul>");
     }

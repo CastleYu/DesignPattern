@@ -1,6 +1,8 @@
+package TemplateMethod;
+
 public class CharDisplay extends AbstractDisplay {  // CharDisplay是AbstractDisplay
                                              // 的子类。
-    private char ch;		// 应该输出的字符。
+    private final char ch;		// 应该输出的字符。
     public CharDisplay(char ch) {	// 把以构造子传递过来的字符ch
         this.ch = ch;	// 储存在属性内。
     }

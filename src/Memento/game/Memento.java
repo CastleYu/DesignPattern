@@ -2,8 +2,8 @@ package Memento.game;
 import java.util.Vector;
 
 public class Memento {   
-    int money;                              // 手边金钱总额
-    Vector fruits;                          // 水果
+    final int money;                              // 手边金钱总额
+    final Vector fruits;                          // 水果
     public int getMoney() {                 // 取得手边金钱总额（narrow interface）
         return money;
     }

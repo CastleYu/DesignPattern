@@ -1,19 +1,16 @@
 package Command.A3.drawer;
 
-import command.*;
+import Command.A3.command.MacroCommand;
 
-import java.util.*;
 import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
 
 public class DrawCanvas extends Canvas implements Drawable {
     // 绘制色彩
-    private Color color = Color.red;
+    private final Color color = Color.red;
     // 绘制点的半径
-    private int radius = 6;
+    private final int radius = 6;
     // 记录
-    private MacroCommand history;
+    private final MacroCommand history;
     // 构造子
     public DrawCanvas(int width, int height, MacroCommand history) {
         setSize(width, height);

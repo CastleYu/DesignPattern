@@ -3,7 +3,7 @@ package Observer;
 import java.util.Random;
 
 public class RandomNumberGenerator extends NumberGenerator {
-    private Random random = new Random();   // 随机数生成器
+    private final Random random = new Random();   // 随机数生成器
     private int number;                     // 目前数值
     public int getNumber() {                // 取得数值
         return number;

@@ -1,5 +1,6 @@
 package AbstractFactory.tablefactory;
-import AbstractFactory.factory.*;
+
+import AbstractFactory.factory.Link;
 
 public class TableLink extends Link {
     public TableLink(String caption, String url) {

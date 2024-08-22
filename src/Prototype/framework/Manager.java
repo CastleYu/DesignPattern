@@ -1,8 +1,9 @@
 package Prototype.framework;
-import java.util.*;
+
+import java.util.Hashtable;
 
 public class Manager {
-    private Hashtable showcase = new Hashtable();
+    private final Hashtable showcase = new Hashtable();
     //建立名称和对象实例间的关系
     public void register(String name, Product proto) {
         showcase.put(name, proto);

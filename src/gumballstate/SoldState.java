@@ -2,7 +2,7 @@ package gumballstate;//package headfirst.designpatterns.state.gumballstate;
 
 public class SoldState implements State {
  
-    GumballMachine gumballMachine;
+    final GumballMachine gumballMachine;
  
     public SoldState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

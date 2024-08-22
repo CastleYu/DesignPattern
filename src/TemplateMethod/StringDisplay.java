@@ -1,7 +1,9 @@
+package TemplateMethod;
+
 public class StringDisplay extends AbstractDisplay {  // StringDisplay也是
                                                         // AbstractDisplay的子类。
-    private String string;                    // 应输出的字串。
-    private int width;                        // 以byte为单位所求出的字串「宽度」。
+    private final String string;                    // 应输出的字串。
+    private final int width;                        // 以byte为单位所求出的字串「宽度」。
     public StringDisplay(String string) {     // 把以构造子传递过来的字串string
         this.string = string;                 // 储存在属性內。
         this.width = string.getBytes().length;// 接着把以byte为单位的字元宽幅

@@ -3,7 +3,7 @@ package gumballstate;//package headfirst.designpatterns.state.gumballstate;
 //import java.util.Random;
 
 public class HasQuarterState implements State {
-	GumballMachine gumballMachine;
+	final GumballMachine gumballMachine;
  
 	public HasQuarterState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;

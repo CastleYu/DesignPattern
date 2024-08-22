@@ -1,7 +1,7 @@
 package State;
 
 public class NightState implements State {
-    private static NightState singleton = new NightState();
+    private static final NightState singleton = new NightState();
     private NightState() {                              // 构造子为private
     }
     public static State getInstance() {                 // 取得唯一的实例

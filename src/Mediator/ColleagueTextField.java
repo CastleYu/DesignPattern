@@ -1,9 +1,8 @@
 package Mediator;
 
-import java.awt.TextField;
-import java.awt.Color;
-import java.awt.event.TextListener;
+import java.awt.*;
 import java.awt.event.TextEvent;
+import java.awt.event.TextListener;
 
 public class ColleagueTextField extends TextField implements TextListener, Colleague {
     private Mediator mediator;

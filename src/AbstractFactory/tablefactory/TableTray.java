@@ -1,16 +1,17 @@
 package AbstractFactory.tablefactory;
-import AbstractFactory.factory.*;
-import java.util.Iterator;
+
+import AbstractFactory.factory.Item;
+import AbstractFactory.factory.Tray;
 
 public class TableTray extends Tray {
     public TableTray(String caption) {
         super(caption);
     }
     public String makeHTML() {
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         buffer.append("<td>");
         buffer.append("<table width=\"100%\" border=\"1\"><tr>");
-        buffer.append("<td bgcolor=\"#cccccc\" align=\"center\" colspan=\""+ tray.size() + "\"><b>" + caption + "</b></td>");
+        buffer.append("<td bgcolor=\"#cccccc\" align=\"center\" colspan=\"").append(tray.size()).append("\"><b>").append(caption).append("</b></td>");
         buffer.append("</tr>\n");
         buffer.append("<tr>\n");
         for (Object o : tray) {

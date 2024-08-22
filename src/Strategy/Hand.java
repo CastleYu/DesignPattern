@@ -12,7 +12,7 @@ public class Hand {
     private static final String[] name = {      // 猜拳手势的字串
         "石头", "剪刀", "布",
     };
-    private int handvalue;                      // 猜拳手势之值
+    private final int handvalue;                      // 猜拳手势之值
     private Hand(int handvalue) {
         this.handvalue = handvalue;
     }

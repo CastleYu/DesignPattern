@@ -1,8 +1,8 @@
 package Bridge;
 
 public class StringDisplayImpl extends DisplayImpl {
-    private String string;                    
-    private int width;                       
+    private final String string;
+    private final int width;
     public StringDisplayImpl(String string) { 
         this.string = string;                  
         this.width = string.getBytes().length;                                          

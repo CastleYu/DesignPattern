@@ -1,12 +1,12 @@
 package Memento.game;
-import java.util.Vector; 
-import java.util.Iterator; 
-import java.util.Random; 
+
+import java.util.Random;
+import java.util.Vector;
 public class Gamer { 
     private int money;                          // 手边金钱总额 
     private Vector fruits = new Vector();       // 水果 
-    private Random random = new Random();       // 随机数生成器 
-    private static String[] fruitsname = {      // 水果名称一览表,类字段
+    private final Random random = new Random();       // 随机数生成器
+    private static final String[] fruitsname = {      // 水果名称一览表,类字段
         "蘋果", "葡萄", "香蕉", "橘子", 
     }; 
     public Gamer(int money) {                   // 构造子 
@@ -34,12 +34,11 @@ public class Gamer {
     //!!!快照存储了那些东东？？？ 
     public Memento createMemento() {            // 快照（snapshot） 
         Memento m = new Memento(money);// 快照里是什么?
-        Iterator it = fruits.iterator(); 
-        while (it.hasNext()) { 
-            String f = (String)it.next(); 
-            if (f.startsWith("好吃的")) {       
-                m.addFruit(f); 
-            } 
+        for (Object fruit : fruits) {
+            String f = (String) fruit;
+            if (f.startsWith("好吃的")) {
+                m.addFruit(f);
+            }
         } 
         return m; 
     } 

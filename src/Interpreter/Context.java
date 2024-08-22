@@ -1,21 +1,20 @@
 package Interpreter;
 
-import java.util.*;
+import java.util.StringTokenizer;
 
 public class Context {
-    private StringTokenizer tokenizer;
+    private final StringTokenizer tokenizer;
     private String currentToken;
     public Context(String text) {
         tokenizer = new StringTokenizer(text);
         nextToken();
     }
-    public String nextToken() {
+    public void nextToken() {
         if (tokenizer.hasMoreTokens()) {
             currentToken = tokenizer.nextToken();
         } else {
             currentToken = null;
         }
-        return currentToken;
     }
     public String currentToken() {
         return currentToken;
@@ -27,7 +26,7 @@ public class Context {
         nextToken();
     }
     public int currentNumber() throws ParseException {
-        int number = 0;
+        int number;
         try {
             number = Integer.parseInt(currentToken);
         } catch (NumberFormatException e) {

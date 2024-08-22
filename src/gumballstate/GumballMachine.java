@@ -2,13 +2,13 @@ package gumballstate;//package headfirst.designpatterns.state.gumballstate;
 
 public class GumballMachine {
  
-	State soldOutState;
-	State noQuarterState;
-	State hasQuarterState;
-	State soldState;
+	final State soldOutState;
+	final State noQuarterState;
+	final State hasQuarterState;
+	final State soldState;
  
 	State state;
-	int count = 0;
+	int count;
  
 	public GumballMachine(int numberGumballs) {
 		soldOutState = new SoldOutState(this);
@@ -78,15 +78,15 @@ public class GumballMachine {
     }
  
 	public String toString() {
-		StringBuffer result = new StringBuffer();
+		StringBuilder result = new StringBuilder();
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2004");
-		result.append("\nInventory: " + count + " gumball");
+		result.append("\nInventory: ").append(count).append(" gumball");
 		if (count != 1) {
 			result.append("s");
 		}
 		result.append("\n");
-		result.append("Machine is " + state + "\n");
+		result.append("Machine is ").append(state).append("\n");
 		return result.toString();
 	}
 }

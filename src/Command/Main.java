@@ -1,20 +1,21 @@
 package Command;
 
-import command.*;
-import drawer.*;
+import Command.command.Command;
+import Command.command.MacroCommand;
+import Command.drawer.DrawCanvas;
+import Command.drawer.DrawCommand;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.*;
 
 public class Main extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
     // 绘制记录
-    private MacroCommand history = new MacroCommand();
+    private final MacroCommand history = new MacroCommand();
     // 绘制区域
-    private DrawCanvas canvas = new DrawCanvas(400, 400, history);
+    private final DrawCanvas canvas = new DrawCanvas(400, 400, history);
     // 刪除键
-    private JButton clearButton  = new JButton("clear");
-    private JButton undoButton  = new JButton("Undo");
+    private final JButton clearButton  = new JButton("clear");
+    private final JButton undoButton  = new JButton("Undo");
     // 构造子
     public Main(String title) {
         super(title);

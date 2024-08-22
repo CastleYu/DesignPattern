@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class BigChar {
     // 字符名称
-    private char charname;
+    private final char charname;
     // 输出成大型文字的字串（有'#' '.' '\n'的行）
     private String fontdata;
     // 构造子
@@ -15,7 +15,7 @@ public class BigChar {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("big" + charname + ".txt"));
             String line;
-            StringBuffer buf = new StringBuffer();
+            StringBuilder buf = new StringBuilder();
             while ((line = reader.readLine()) != null) {
                 buf.append(line);
                 buf.append("\n");

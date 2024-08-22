@@ -4,9 +4,9 @@ import java.util.Hashtable;
 
 public class BigCharFactory {
     // 管理现有的BigChar的对象实例
-    private Hashtable pool = new Hashtable();
+    private final Hashtable pool = new Hashtable();
     // Singleton Pattern
-    private static BigCharFactory singleton = new BigCharFactory();
+    private static final BigCharFactory singleton = new BigCharFactory();
     // 构造子，为何要Private？
     private BigCharFactory() {
     	

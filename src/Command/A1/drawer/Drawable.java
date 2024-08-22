@@ -1,6 +1,6 @@
 package Command.A1.drawer;
 
-import java.awt.Color;                          
+import java.awt.*;
 
 public interface Drawable {
     void init();                

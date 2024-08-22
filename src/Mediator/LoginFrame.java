@@ -1,12 +1,8 @@
 package Mediator;
 
-import java.awt.Frame;
-import java.awt.Label;
-import java.awt.Color;
-import java.awt.CheckboxGroup;
-import java.awt.GridLayout;
-import java.awt.event.ActionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueCheckbox checkGuest;

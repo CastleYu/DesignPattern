@@ -1,7 +1,7 @@
 package Bridge;
 
 public class Display {
-    private DisplayImpl impl;
+    private final DisplayImpl impl;
     public Display(DisplayImpl impl) {
         this.impl = impl;
     }

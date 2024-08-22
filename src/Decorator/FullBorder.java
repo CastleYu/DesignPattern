@@ -20,10 +20,8 @@ public class FullBorder extends Border {
         }
     }
     private String makeLine(char ch, int count) {         // 以字符ch，建立重复count次的连续字串
-        StringBuffer buf = new StringBuffer();
-        for (int i = 0; i < count; i++) {
-            buf.append(ch);
-        }
+        StringBuilder buf = new StringBuilder();
+        buf.append(String.valueOf(ch).repeat(Math.max(0, count)));
         return buf.toString();
     }
 }

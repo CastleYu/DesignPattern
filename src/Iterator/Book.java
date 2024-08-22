@@ -1,7 +1,7 @@
 package Iterator;
 
 public class Book {
-    private String name = "";
+    private String name;
     //构造函数指定书名
     public Book(String name) {
         this.name = name;

@@ -3,7 +3,7 @@ package Prototype;
 import framework.*;
 
 public class UnderlinePen implements Product {
-    private char ulchar;
+    private final char ulchar;
     public UnderlinePen(char ulchar) {
         this.ulchar = ulchar;//super
     }

@@ -2,7 +2,7 @@ package State;
 
 //专心做白天的事情
 public class DayState implements State {
-    private static DayState singleton = new DayState();
+    private static final DayState singleton = new DayState();
     private DayState() {                                // 构造子为private
     }
     public static State getInstance() {                 // 取得唯一的实例

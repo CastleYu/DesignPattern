@@ -4,8 +4,8 @@ import java.util.Iterator;
 import java.util.Vector;
 
 public class Directory extends Entry {
-    private String name;                    // 目录名称
-    private Vector dir = new Vector();      // 目录进入点的集合
+    private final String name;                    // 目录名称
+    private final Vector dir = new Vector();      // 目录进入点的集合
     public Directory(String name) {         // 构造子
         this.name = name;
     }
@@ -14,9 +14,8 @@ public class Directory extends Entry {
     }
     public int getSize() {                  // 取得目录容量
         int size = 0;
-        Iterator it = dir.iterator();
-        while (it.hasNext()) {
-            Entry entry = (Entry)it.next();
+        for (Object o : dir) {
+            Entry entry = (Entry) o;
             size += entry.getSize();
         }
         return size;

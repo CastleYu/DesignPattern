@@ -1,7 +1,7 @@
 package Builder;
 
 public class Director {
-    private Builder builder;
+    private final Builder builder;
     public Director(Builder builder) {   // 先把Builder的子类的实例， 
         this.builder = builder;          // 储存在builder属性
     }

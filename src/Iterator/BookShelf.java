@@ -1,7 +1,9 @@
 package Iterator;
 
-public class BookShelf implements Aggregate {
-    private Book[] books;
+import java.util.Iterator;
+
+public class BookShelf implements Iterable<Book> {
+    private final Book[] books;
     private int last = 0;
     public BookShelf(int maxsize) {
         this.books = new Book[maxsize];
@@ -16,7 +18,7 @@ public class BookShelf implements Aggregate {
     public int getLength() {
         return last;
     }
-    public Iterator iterator() {
+    public Iterator<Book> iterator() {
         return new BookShelfIterator(this);
     }
 }

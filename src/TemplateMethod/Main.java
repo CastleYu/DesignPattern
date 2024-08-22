@@ -1,3 +1,5 @@
+package TemplateMethod;
+
 public class Main {
     public static void main(String[] args) {
 	// 建立1个有'H'的CharDisplay的对象实例。

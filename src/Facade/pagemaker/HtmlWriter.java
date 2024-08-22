@@ -1,7 +1,7 @@
 package Facade.pagemaker;
 
-import java.io.Writer;
 import java.io.IOException;
+import java.io.Writer;
 
 public class HtmlWriter {
     private final Writer writer;

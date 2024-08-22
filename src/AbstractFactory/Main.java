@@ -1,6 +1,9 @@
 package AbstractFactory;
 
-import AbstractFactory.factory.*;
+import AbstractFactory.factory.Factory;
+import AbstractFactory.factory.Link;
+import AbstractFactory.factory.Page;
+import AbstractFactory.factory.Tray;
 
 public class Main {
     public static void main(String[] args) {

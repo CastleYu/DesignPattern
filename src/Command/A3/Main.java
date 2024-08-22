@@ -1,36 +1,37 @@
 package Command.A3;
 
-import command.*;
-import drawer.*;
+import Command.A3.command.Command;
+import Command.A3.command.MacroCommand;
+import Command.A3.drawer.DrawCanvas;
+import Command.A3.drawer.DrawCommand;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.*;
 
-public class Main extends JFrame implements ActionListener {        
+public class Main extends JFrame implements ActionListener {
     // 绘制记录
-    private MacroCommand history = new MacroCommand();
+    private final MacroCommand history = new MacroCommand();
     // 绘制区域
-    private DrawCanvas canvas = new DrawCanvas(400, 400, history);
+    private final DrawCanvas canvas = new DrawCanvas(400, 400, history);
     // 刪除键
-    private JButton clearButton  = new JButton("clear");
+    private final JButton clearButton = new JButton("clear");
 
     // 构造子
     public Main(String title) {
         super(title);
 
-        this.addWindowListener(new WindowAdapter() {        
-            public void windowClosing(WindowEvent e) {      
-                System.exit(0);                             
-            }                                               
-        });                                                 
-        canvas.addMouseMotionListener(new MouseMotionAdapter() {    
-            public void mouseDragged(MouseEvent e) {                
-                Command cmd = new DrawCommand(canvas, e.getPoint());    
-                history.append(cmd);                                    
-                cmd.execute();                                          
-            }                                                           
-        });                                                             
+        this.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        canvas.addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseDragged(MouseEvent e) {
+                Command cmd = new DrawCommand(canvas, e.getPoint());
+                history.append(cmd);
+                cmd.execute();
+            }
+        });
         clearButton.addActionListener(this);
 
         Box buttonBox = new Box(BoxLayout.X_AXIS);

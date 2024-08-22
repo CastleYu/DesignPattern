@@ -1,7 +1,7 @@
 package ChainOfResponsibility;
 
 public abstract class Support {
-    private String name;                    // 问题解决者的名称
+    private final String name;                    // 问题解决者的名称
     private Support next;                   // 转送位置
 
     public Support(String name) {           // 产生问题解决者

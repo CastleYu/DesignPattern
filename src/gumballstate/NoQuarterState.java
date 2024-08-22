@@ -1,7 +1,7 @@
 package gumballstate;//package headfirst.designpatterns.state.gumballstate;
 
 public class NoQuarterState implements State {
-    GumballMachine gumballMachine;
+    final GumballMachine gumballMachine;
  
     public NoQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
