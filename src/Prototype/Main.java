@@ -1,6 +1,6 @@
 package Prototype;
 
-import framework.*;
+import Prototype.framework.*;
 
 public class Main {
     public static void main(String[] args) {
