@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/Composite/Directory.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Composite/Entry.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Composite/File.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Composite/FileTreatmentException.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Composite/Main.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Iterator/Aggregate.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Iterator/Book.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Iterator/BookShelf.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Iterator/BookShelfIterator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Iterator/Iterator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Iterator/Main.java" charset="GBK" />
+  </component>
+</project>
